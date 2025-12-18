@@ -9,7 +9,10 @@ from datetime import datetime, timezone
 
 DATABASE_URL = 'sqlite+aiosqlite:///./test.db'
 
-class Post(DeclarativeBase):
+class Base(DeclarativeBase):
+    pass
+
+class Post(Base):
     __tablename__ = 'posts'
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
