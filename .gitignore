@@ -1,0 +1,6 @@
+# Python-generated files
+.venv/
+venv/
+app/__pycache__/
+.env
+
