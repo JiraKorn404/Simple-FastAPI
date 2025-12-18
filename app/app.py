@@ -10,7 +10,7 @@ async def lifespan(app: FastAPI):
     await create_db_and_tables()
     yield
 
-app = FastAPI()
+app = FastAPI(lifespan=lifespan)
 
 @app.post('/upload')
 async def upload_file(
